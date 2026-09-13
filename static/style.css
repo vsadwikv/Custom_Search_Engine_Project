@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+}
+
+/* Applying Styles To HomePage */
+
+.homePageContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePageContainer .heading {
+  text-align: center;
+  font-size: clamp(40px, 6vw, 56px);
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.homePageContainer #e1 {
+  color: red;
+}
+
+.homePageContainer #e2 {
+  color: green;
+}
+
+.homePageContainer #e3 {
+  color: blue;
+}
+
+.homePageContainer #e4 {
+  color: orange;
+}
+
+.homePageContainer #e5 {
+  color: purple;
+}
+
+.homePageContainer #e6 {
+  color: red;
+}
+
+.homePageContainer #e7 {
+  color: green;
+}
+
+.homePageContainer #e8 {
+  color: blue;
+}
+
+.homePageContainer #e9 {
+  color: yellow;
+}
+
+.homePageContainer #e10 {
+  color: orange;
+}
+
+.homePageContainer .heading span {
+  text-shadow: 
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black;
+}
+
+.homePageContainer .navLinks {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.homePageContainer .link {
+  color: grey;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.homePageContainer .formField {
+  text-align: center;
+}
+
+.homePageContainer #searchInput {
+  display: block;
+  width: min(440px, 90vw);
+  height: 24px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.homePageContainer .button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 14px;
+  margin: 0 3px;
+
+  background-color: #d3d3d3;
+  border: 2px outset #eeeeee;
+}
+
+.homePageContainer hr {
+    width: min(440px, 90vw);
+    border: 0;
+    border-top: 1px solid #d3d3d3;
+    margin: 18px 0 10px 0;
+}
+
+.homePageContainer .licenceAgreementLinks {
+  text-align: center;
+}
+
+.homePageContainer .knowMoreLinks {
+  color: black;
+  margin: 0 5px;
+}
+
+.homePageContainer #copyRight {
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* Applying Styles To Results */
+
+.resultsContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.resultsContainer header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.resultsContainer .earthIcon {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+}
+
+.resultsContainer .header {
+  margin: 0 10px 0 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+}
+
+.resultsContainer .formField {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.resultsContainer #searchInput {
+  width: 100%;
+  max-width: 300px;
+  height: 26px;
+}
+
+.resultsContainer .formField .button {
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+.resultsContainer .searchResult {
+  margin-top: 18px;
+  max-width: 850px;
+}
+
+.resultsContainer .searchResult a {
+  color: darkblue;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: clamp(18px, 2.5vw, 24px);
+}
+
+.resultsContainer .searchResult p {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+.resultsContainer .searchResult span {
+  display: block;
+  color: green;
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+
+@media (max-width: 700px) {
+
+    .resultsContainer header {
+        flex-wrap: wrap;
+    }
+
+    .resultsContainer .formField {
+        width: 100%;
+    }
+
+    .resultsContainer #searchInput {
+        flex: 1;
+        max-width: none;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .resultsContainer {
+        padding: 10px;
+    }
+
+    .resultsContainer .earthIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .resultsContainer .header {
+        font-size: 24px;
+    }
+
+    .resultsContainer .formField button {
+        padding: 3px 7px;
+    }
+}

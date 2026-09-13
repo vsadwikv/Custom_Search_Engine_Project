@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResultsUI</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="resultsContainer">
+      <header>
+        <img
+          class="earthIcon"
+          src="https://res.cloudinary.com/dwt9sswhm/image/upload/v1786527701/fac28a76-dc80-4ec6-b857-e14729a006c5_ytn6lv.jpg"
+          alt="Website Logo"
+        />
+        <h1 class="header">WebSearch</h1>
+        <form action="/search" method="get" class="formField">
+          <input
+            id="searchInput"
+            name="query"
+            type="text"
+            value="{{query}}"
+            placeholder="1990s retro web design"
+          />
+          <input type="hidden" name="previous_query" value="{{query}}" />
+          <button type="submit" class="button">Search</button>
+          <button type="reset" class="button">Reset</button>
+        </form>
+      </header>
+      <main>
+        <p>Search Result for: <strong>{{query}}</strong></p>
+
+        {% if results %} {% for result in results %}
+        <article class="searchResult">
+          <a href="{{ result.url }}">{{ result.title }}</a>
+          <p>{{ result.snippet }}...</p>
+          <a href="{{ result.url }}"><span>{{ result.url }}</span></a>
+        </article>
+        {% endfor %} {% else %}
+        <h2>Search Input Invalid! No Matches Were Found</h2>
+        {% endif %}
+      </main>
+    </div>
+  </body>
+</html>

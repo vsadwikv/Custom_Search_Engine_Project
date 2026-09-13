@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePageUI</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="homePageContainer">
+      <header>
+        <h1 class="heading">
+          <span id="e1">S</span><span id="e2">E</span><span id="e3">A</span
+          ><span id="e4">R</span><span id="e5">C</span><span id="e6">H</span
+          ><span id="e7">F</span><span id="e8">I</span><span id="e9">N</span
+          ><span id="e10">D</span>
+        </h1>
+      </header>
+      <main>
+        <section>
+          <nav class="navLinks">
+            <a class="link" href="#">Search</a>
+            <a class="link" href="#">Directory</a>
+            <a class="link" href="#">Help</a>
+            <a class="link" href="#">Settings</a>
+          </nav>
+        </section>
+        <section>
+          <form action="/search" method="get" class="formField">
+            <input id="searchInput" name="query" type="text" placeholder="" />
+            <button type="submit" name="action" value="search" class="button">
+              Search The Web
+            </button>
+            <button type="submit" name="action" value="lucky" class="button">
+              I'm Feeling Lucky
+            </button>
+          </form>
+        </section>
+      </main>
+      <hr />
+      <footer>
+        <nav class="licenceAgreementLinks">
+          <a class="knowMoreLinks" href="#">About SearchFind</a>
+          <a class="knowMoreLinks" href="#">Advertising</a>
+          <a class="knowMoreLinks" href="#">Privacy Policy</a>
+        </nav>
+        <p id="copyRight">© 1998 SearchFind Inc.</p>
+      </footer>
+    </div>
+  </body>
+</html>
